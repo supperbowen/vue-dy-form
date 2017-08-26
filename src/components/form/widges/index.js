@@ -5,6 +5,8 @@ import radios from './radios'
 import select from './select'
 import date from './date'
 import datetime from './datetime'
+import button from './button'
+import custom from './custom'
 
 let radio = radios;
 export default{
@@ -15,5 +17,7 @@ export default{
   checkboxs,
   select,
   date,
-  datetime
+  datetime,
+  button,
+  custom
 }

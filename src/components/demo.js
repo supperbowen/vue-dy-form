@@ -13,11 +13,8 @@ export default {
       },
       form: layout
     }
-  },
-  methods: {
-
-  },
+  },  
   render(h) {
-    return <Form style={{width:'500px'}} options={this.form} bean={this.bean}></Form>
+    return <Form  style={{width:'500px'}} options={this.form} bean={this.bean}></Form>
   }
 }

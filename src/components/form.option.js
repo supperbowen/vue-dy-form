@@ -1,22 +1,31 @@
 export default {
   rows: [{
       label: '姓名',
-      model: 'name',
-      domain: 'input'
-    }, {
-      label: '性别',
-      model: 'gender',
-      domain: 'radios',
-      options: [{
-          label: '男',
-          value: 'M'
+      cols:[
+        {
+          span:11,
+          model: 'name',
+          domain: 'input',
+          ifStatus:'showName'          
         },
         {
-          label: '女',
-          value: 'F'
+          span:10,
+          offset:2,
+          model: 'gender',
+          domain: 'radios',
+          options: [{
+              label: '男',
+              value: 'M'
+            },
+            {
+              label: '女',
+              value: 'F'
+            }
+          ]
         }
-      ]
-    },
+      ],
+     
+    }, 
     {
       label: '语言',
       model: 'language',
@@ -63,6 +72,13 @@ export default {
           value: 'tailan'
         }
       ]
+    },
+    {
+      lable:'custom',
+      domain:'custom',
+      render:(h, option, bean)=>{
+          return <div>{JSON.stringify(bean)}</div>
+      }
     }
   ]
 }
